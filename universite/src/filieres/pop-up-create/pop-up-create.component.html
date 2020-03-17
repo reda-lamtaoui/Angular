@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Ajouter une filiére</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Filiére</mat-label>
+      <input #title matInput>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Annuler</button>
+    <button mat-button (click)="AjouterFiliere(title.value)" cdkFocusInitial>Ajouter</button>
+  </div>

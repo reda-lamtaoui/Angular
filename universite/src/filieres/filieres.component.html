@@ -1,0 +1,49 @@
+<!-- <input [(ngModel)]="name">
+<h1>{{name}}</h1>
+<button (click)="onclick()">afficher alert</button> -->
+
+<!-- {{teacher$ | async}} -->
+<!-- {{teacher$ | json}} -->
+<h1> Filiéres</h1>
+<button mat-button class="btn1" (click)="AjouterFiliere()">Ajouter une filiére</button>
+<table mat-table [dataSource]="filiere$ | async" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>ID</th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef> filiere </th>
+      <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container>
+    <ng-container matColumnDef="list">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+              <section layout="row" layout-align="center center">
+                <button class="groupX left" (click)="versEtudiant(element.id)" >List des etudiants</button>
+              </section>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="supprimer">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+                <section layout="row" layout-align="center center">
+                    <button class="groupX left" (click)="ModifierFiliere(element.id,element.title)" >Modifier</button>
+                    <button class="groupX middle" (click)="SupprimerFiliere(element.id)">Supprimer</button>
+                </section>
+        </td>
+      </ng-container>
+  
+  
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
