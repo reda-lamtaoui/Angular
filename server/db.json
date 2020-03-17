@@ -1,0 +1,51 @@
+{
+  "filieres": [
+    {
+      "id": 4,
+      "title": "GTE"
+    },
+    {
+      "id": 5,
+      "title": "GEI"
+    },
+    {
+      "id": 6,
+      "title": "GEII"
+    }
+  ],
+  "etudiants": [
+    {
+      "nom": "Alaou",
+      "prenom": "kal",
+      "id": 8,
+      "filiereId": "4"
+    },
+    {
+      "nom": "imad",
+      "prenom": "louis",
+      "id": 10
+    },
+    {
+      "nom": "imad ",
+      "prenom": "alaoui",
+      "id": 11
+    },
+    {
+      "nom": "Alaouiii",
+      "prenom": "kal",
+      "filiereId": "4",
+      "id": 12
+    },
+    {
+      "nom": "reda",
+      "prenom": "Alaoui",
+      "filiereId": "5",
+      "id": 13
+    }
+  ],
+  "users": {
+    "id": 1,
+    "password": "",
+    "userName": "typicode"
+  }
+}
