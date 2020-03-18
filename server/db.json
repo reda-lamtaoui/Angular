@@ -11,12 +11,16 @@
     {
       "id": 6,
       "title": "GEII"
+    },
+    {
+      "id": 7,
+      "title": "DIM FI"
     }
   ],
   "etudiants": [
     {
-      "nom": "Alaou",
-      "prenom": "kal",
+      "nom": "z",
+      "prenom": "za",
       "id": 8,
       "filiereId": "4"
     },

@@ -25,11 +25,16 @@ export class PopUpCreateComponent{
     this.dialogRef.close();
   }
   AjouterFiliere(title: string) {
-    this.Fil.title = title;
-    this.FiliereService.post(this.Fil).subscribe(() => {
-      this.alert('Filiére Ajouté', ' ');
-      this.dialogRef.close();
-    });
+    if (title ==="") {
+      this.alert('Champs vide', ' ');
+
+    } else {
+      this.Fil.title = title;
+      this.FiliereService.post(this.Fil).subscribe(() => {
+        this.alert('Filiére Ajouté', ' ');
+        this.dialogRef.close();
+      });
+    }
   }
 
 }

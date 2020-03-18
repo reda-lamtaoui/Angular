@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>Ajouter un etudiant</h1>
+<h1 mat-dialog-title>Modifier un etudiant</h1>
 <div mat-dialog-content>
     <mat-form-field>
         <label>Nom</label>
@@ -12,5 +12,5 @@
   
   <div mat-dialog-actions class="button">
     <button mat-button (click)="onNoClick()">Annuler</button>
-    <button mat-button (click)="ModifierEtudiant(data.id,nom.value,prenom.value, data.filiereId)" cdkFocusInitial>Ajouter</button>
+    <button mat-button (click)="ModifierEtudiant(data.id,nom.value,prenom.value, data.filiereId)" cdkFocusInitial>Modifier</button>
   </div>

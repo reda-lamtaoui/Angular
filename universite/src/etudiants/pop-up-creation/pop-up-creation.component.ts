@@ -25,6 +25,10 @@ export class PopUpCreationComponent{
     this.dialogRef.close();
   }
   AjouterEtudiant(nom: string, prenom: string, filiereId: number) {
+    if (nom ==="" || prenom === "") {
+      this.alert('Champs vide', ' ');
+
+    } else {
     this.Etu.nom = nom;
     this.Etu.prenom = prenom;
     this.Etu.filiereId = filiereId;
@@ -32,6 +36,7 @@ export class PopUpCreationComponent{
       this.alert('Etudiant Ajouté', ' ');
       this.dialogRef.close();
     });
+    }
   }
 
 }

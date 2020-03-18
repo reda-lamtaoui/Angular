@@ -26,6 +26,10 @@ export class PopUpComponent {
     this.dialogRef.close();
   }
   ModifierFiliere(id: number, title: string) {
+    if (title ==="") {
+      this.alert('Champs vide', ' ');
+
+    } else {
     this.Fil.id = id;
     this.Fil.title = title;
     this.FiliereService.update(this.Fil).subscribe(() => {
@@ -33,5 +37,6 @@ export class PopUpComponent {
       this.dialogRef.close();
     });
   }
+}
 
 }

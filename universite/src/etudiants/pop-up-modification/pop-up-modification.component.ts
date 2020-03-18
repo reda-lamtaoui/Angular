@@ -27,6 +27,10 @@ export class PopUpModificationComponent{
     this.dialogRef.close();
   }
   ModifierEtudiant(id: number, nom: string, prenom: string , filId: number) {
+    if (nom ==="" || prenom === "") {
+      this.alert('Champs vide', ' ');
+
+    } else {
     this.Etu.nom = nom;
     this.Etu.prenom = prenom;
     this.Etu.id = id;
@@ -35,6 +39,7 @@ export class PopUpModificationComponent{
       this.alert('Etudiant Ajouté', ' ');
       this.dialogRef.close();
     });
+  }
 
 }
 
